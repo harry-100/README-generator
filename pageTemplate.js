@@ -1,6 +1,7 @@
 module.exports = (userResponse) => {
+    const {name, github} = userResponse;
     return `
-    Name: This is my ${userResponse.name}.
-    GitHUb: And this is my ${userResponse.github} account. 
+    Name: This is my ${name}.
+    GitHUb: And this is my ${github} account. 
     `;      
 }

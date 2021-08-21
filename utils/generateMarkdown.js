@@ -1,29 +1,34 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
+  if(!license) {
+    return '';
+  }
+  else {
   switch(license) {
     case 'MIT':
       return `
-      ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
       `;
       break;
     case 'ISC':
       return `
-      https://img.shields.io/badge/License-ISC-blue.svg
+![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)
       ` ;
       break;
     case 'Mozilla':
       return `
-      https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg
+![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)
       `;
       break;
     case 'Creative Commons':
       return `
-      https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg
+![License: CC0-1.0](https://img.shields.io/badge/License-CC0%201.0-lightgrey.svg)
       `;
       break;
 
   }
+}
 }
 
 // TODO: Create a function that returns the license link
@@ -60,7 +65,7 @@ function tableOfContentsLicense(license){
     return '';
   }
   return `
-  * [License](#License)
+* [License](#License)
   `
 }
 
@@ -72,7 +77,7 @@ function renderLicenseSection(license) {
   }
   return `
   ## License
-  This application is covered under this [${license}](${licenseLink(license)})
+  This application is covered under [${license}](${licenseLink(license)}) license.
   `
 }
 

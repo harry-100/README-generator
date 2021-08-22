@@ -2,7 +2,7 @@
 const inquirer = require('inquirer');
 const writeFile = require('./utils/writeFile');
 const generateReadme = require('./utils/generateMarkdown')
-const fileName = "README.md"
+const fileName = "README1.md"
 
 // Using Inquirer to get user information
 
